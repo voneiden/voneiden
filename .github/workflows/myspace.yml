@@ -35,10 +35,8 @@ jobs:
           TITLE: ${{ github.event.issue.title }}
           BODY: ${{ github.event.issue.title }}
           AUTHOR: ${{ github.event.issue.user.login }}
-        run: |
-          echo Title $TITLE
-          echo Body $BODY
-          echo Author $AUTHOR
+          TIMESTAMP: ${{ github.event.issue.created_at }}
+        run: python myspace.py
           
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
