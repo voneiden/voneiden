@@ -43,3 +43,4 @@ jobs:
         with:
           title: "Add comment"
           body: Closes \#${{ github.event.issue.number }}
+          branch-suffix: random
