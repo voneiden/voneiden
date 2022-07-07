@@ -1,12 +1,12 @@
 import os 
 
 def process():
-  title = os.environ['TITLE']
+  number = os.environ['NUMBER']
   body = os.environ['BODY']
   author = os.environ['AUTHOR']
   timestamp = os.environ['TIMESTAMP']
   
-  if title == 'Comment':
+  if number == '1':
     readme = open('README.md', 'r').read()
     tok = readme.split('[//]: # (Comments)')
     readme = [
