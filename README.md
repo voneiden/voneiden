@@ -1,5 +1,5 @@
 ### Za-boom!
 
-#### Comments ([Add](https://github.com/voneiden/voneiden/issues?title=Comment))
+#### Guestbook ([Add](https://github.com/voneiden/voneiden/issues/new?title=Comment))
 
 [//]: # (Comments)
