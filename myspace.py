@@ -12,7 +12,7 @@ def process():
     readme = [
       tok[0],
       '[//]: # (Comments)\n',
-      f'{body}\n\n-- {author} @ {timestamp}\n---\n',
+      f'{body}\n\n-- {author} @ {timestamp}\n\n---\n',
       tok[1]
     ]
     with open('README.md', 'w') as f:
