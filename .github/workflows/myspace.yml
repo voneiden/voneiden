@@ -5,8 +5,8 @@ name: MySpace2000
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  issues:
-    types: [ "opened" ]
+  issue_comment:
+    types: [ "created" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,15 +32,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         env:
-          TITLE: ${{ github.event.issue.title }}
-          BODY: ${{ github.event.issue.body }}
-          AUTHOR: ${{ github.event.issue.user.login }}
-          TIMESTAMP: ${{ github.event.issue.created_at }}
+          NUMBER: ${{ github.event.issue.number }}
+          BODY: ${{ github.event.comment.body }}
+          AUTHOR: ${{ github.event.comment.user.login }}
+          TIMESTAMP: ${{ github.event.comment.created_at }}
         run: python myspace.py
           
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
           title: "Add comment"
-          body: Closes \#${{ github.event.issue.number }}
           branch-suffix: random
