@@ -33,10 +33,13 @@ jobs:
       - name: Run a multi-line script
         env:
           TITLE: ${{ github.event.issue.title }}
-          BODY: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.issue.body }}
           AUTHOR: ${{ github.event.issue.user.login }}
           TIMESTAMP: ${{ github.event.issue.created_at }}
         run: python myspace.py
           
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
+        with:
+          title: "Add comment"
+          body: Closes \#${{ github.event.issue.number }}
