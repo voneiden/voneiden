@@ -11,7 +11,7 @@ def process():
     tok = readme.split('[//]: # (Comments)')
     readme = [
       tok[0],
-      '[//]: # (Comments)',
+      '[//]: # (Comments)\n',
       f'{body}\n\n-- {author} @ {timestamp}\n---\n',
       tok[1]
     ]
