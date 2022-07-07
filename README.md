@@ -1,6 +1,6 @@
 ### Za-boom!
 
-#### Guestbook ([Add](https://github.com/voneiden/voneiden/issues/new?title=Comment))
+#### Shoutbox ([Add](https://github.com/voneiden/voneiden/issues/1))
 
 [//]: # (Comments)
 I imagine this can break in so many ways.
