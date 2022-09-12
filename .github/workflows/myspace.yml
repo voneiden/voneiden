@@ -43,3 +43,4 @@ jobs:
         with:
           title: "Add comment"
           branch-suffix: random
+          reviewers: "voneiden"
